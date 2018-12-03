@@ -185,7 +185,7 @@ void CS1APLayer::AuthenticationRepMsg(int nlength)
 {
 	///////////////////////////// Fill in the blank. ////////////////////////////////////////
 	m_sHeader.s1ap_pdu = S1AP_PDU_INITIAL_MESSAGE; // a type of PDU
-	m_sHeader.s1ap_proc_code = S1AP_PROC_CODE_INITIAL_UE_MSG; // procedure code
+	m_sHeader.s1ap_proc_code = S1AP_PROC_CODE_UPLINK_NAS_TRANS; // procedure code
 	/////////////////////////////////////////////////////////////////////////////////////////
 	m_sHeader.s1ap_crit = 0x40;
 	m_sHeader.s1ap_length = nlength + 3;
@@ -197,8 +197,8 @@ void CS1APLayer::AuthenticationRepMsg(int nlength)
 void CS1APLayer::initialContextSetupResponseItems(int nlength)
 {
 	///////////////////////////// Fill in the blank. ////////////////////////////////////////
-	m_sHeader.s1ap_pdu = S1AP_PDU_INITIAL_MESSAGE; // a type of PDU
-	m_sHeader.s1ap_proc_code = S1AP_PROC_CODE_INITIAL_UE_MSG; // procedure code
+	m_sHeader.s1ap_pdu = S1AP_PDU_SUCCESSFUL_OUTCOME; // a type of PDU
+	m_sHeader.s1ap_proc_code = S1AP_PROC_CODE_INITIAL_CONTEXTSETUP; // procedure code
 	/////////////////////////////////////////////////////////////////////////////////////////
 	m_sHeader.s1ap_crit = 0x00;
 	m_sHeader.s1ap_length = nlength + 3;
@@ -211,7 +211,7 @@ void CS1APLayer::attachCompleteItems(int nlength)
 {
 	///////////////////////////// Fill in the blank. ////////////////////////////////////////
 	m_sHeader.s1ap_pdu = S1AP_PDU_INITIAL_MESSAGE; // a type of PDU
-	m_sHeader.s1ap_proc_code = S1AP_PROC_CODE_INITIAL_UE_MSG; // procedure code
+	m_sHeader.s1ap_proc_code = S1AP_PROC_CODE_UPLINK_NAS_TRANS; // procedure code
 	/////////////////////////////////////////////////////////////////////////////////////////
 	m_sHeader.s1ap_crit = 0x40;
 	m_sHeader.s1ap_length = nlength + 3;
